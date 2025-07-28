@@ -1,5 +1,3 @@
-require 'pry'
-
 class TimeApp
   VALID_FORMATS = %w[year month day hour minute second].freeze
 
@@ -26,7 +24,6 @@ class TimeApp
     
     # Если параметр format есть то разбываем его на отдельные форматы
     formats = format_param.split(',')
-    binding.pry
 
     # Проверяем наличие неизвестных форматов
     unknown_formats = formats.reject { |format| VALID_FORMATS.include?(format) }
